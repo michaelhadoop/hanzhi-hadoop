@@ -20,7 +20,8 @@
 	<mvc:annotation-driven />
 	<!-- 对web包中的所有类进行扫描，以完成Bean创建和自动依赖注入的功能 -->  
 	<context:component-scan base-package="org.apache.phoenix.admin" />
-
+    <!-- 容器默认的DefaultServletHandler处理 所有静态内容与无RequestMapping处理的URL -->
+	<mvc:default-servlet-handler />
     <!-- ViewResolver -->
 	<bean class="org.springframework.web.servlet.view.UrlBasedViewResolver">
 	    <property name="viewClass"  
